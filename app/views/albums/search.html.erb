@@ -1,0 +1,18 @@
+
+<%= form_with url: albums_search_url, method: :get, class: 'form-control w-full max-w-xs' do |form| %>
+  <%= form.label :query, class: 'label' do %>
+    <span class="label-text">Search for Album</span>
+  <% end %>
+  <div class='join'>
+    <%= form.text_field :query, class:'input input-bordered join-item' %>
+    <%= form.submit "Search", class:'btn join-item' %>
+ </div>
+<% end %>
+
+<div class="container text-center mt-2 grid grid-flow-col">
+    <div class="row row-cols-auto g-2">
+       <% @albums.each do |album| %>
+        <%= render album %>
+        <% end %>
+    </div>
+</div>

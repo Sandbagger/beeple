@@ -10,8 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_22_112930) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.text "thumbnail"
+    t.text "title"
+    t.text "subtitle"
+    t.text "external_id"
+    t.text "likes_count", default: "0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
