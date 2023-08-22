@@ -1,12 +1,12 @@
 # Readme
 
-1.
+1. copy example env file
 
 ```sh
 cp .env.example .env
 ```
 
-1.
+2. run bash script
 
 ```sh
   ./go up
